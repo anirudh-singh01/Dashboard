@@ -140,7 +140,7 @@
   background: rgba(28, 17, 41, 0.88);
 }
 
-.menu-bar{
+/* .menu-bar{
   height: 88vh;
   margin-top: 2rem;
   display: flex;
@@ -148,6 +148,23 @@
   gap: 15px;
   font-size: 1rem;
   position: relative;
+
+
+} */
+
+.menu-bar {
+  height: calc(100vh - 4rem); /* Adjust the height to fit within the viewport */
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+  position: relative;
+  overflow-y: auto; /* Add vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  scrollbar-width: thin; /* Firefox: Thin scrollbar */
+
+    
 }
 
 .toggle-theme-btn{
