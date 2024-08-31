@@ -17,8 +17,7 @@ const MenuList = ({ darkTheme }) => {
     <Menu
       theme={darkTheme ? "dark" : "light"}
       mode="inline"
-      className="menu-bar"
-     
+      className="menu-bar"  // Custom class for additional styling
     >
       {/* SubMenu: Firewall Automation */}
       {/* This submenu contains tasks related to firewall automation. */}
@@ -29,21 +28,21 @@ const MenuList = ({ darkTheme }) => {
       >
         {/* Task 1: Link to Context Setting */}
         <Menu.Item key="firewall-task-1">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Context Setting
           </a>
         </Menu.Item>
 
         {/* Task 2: Link to Change Request */}
         <Menu.Item key="firewall-task-2">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Change Request
           </a>
         </Menu.Item>
 
         {/* Task 3: Link to HclTech Automation */}
         <Menu.Item key="firewall-task-3">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             HclTech Automation
           </a>
         </Menu.Item>
@@ -54,28 +53,28 @@ const MenuList = ({ darkTheme }) => {
       <Menu.SubMenu key="sse-tasks" icon={<BarsOutlined />} title="SSE">
         {/* Task 1: Link to Before SSE */}
         <Menu.Item key="sse-task-1">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Before SSE
           </a>
         </Menu.Item>
 
         {/* Task 2: Link to After SSE */}
         <Menu.Item key="sse-task-2">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             After SSE
           </a>
         </Menu.Item>
 
         {/* Task 3: Link to Use cases covered */}
         <Menu.Item key="sse-task-3">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Use cases covered
           </a>
         </Menu.Item>
       </Menu.SubMenu>
 
       {/* Menu Item: Privileged Remote Access */}
-      {/* This item now links to an external URL for Privileged Remote Access. */}
+      {/* This item links to an external URL for Privileged Remote Access. */}
       <Menu.Item key="privileged-remote-access" icon={<PayCircleOutlined />}>
         <a
           href="https://www.youtube.com/"
@@ -95,21 +94,21 @@ const MenuList = ({ darkTheme }) => {
       >
         {/* Task 1: Link to Context Setting */}
         <Menu.Item key="endpoint-task-1">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Context Setting
           </a>
         </Menu.Item>
 
         {/* Task 2: Link to RDP Victim Machine */}
         <Menu.Item key="endpoint-task-2">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             RDP Victim Machine
           </a>
         </Menu.Item>
 
         {/* Task 3: Link to Suspicious Machine Contain */}
         <Menu.Item key="endpoint-task-3">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Suspicious Machine Contain
           </a>
         </Menu.Item>
@@ -120,28 +119,28 @@ const MenuList = ({ darkTheme }) => {
       <Menu.SubMenu key="soc-tasks" icon={<BarsOutlined />} title="SOC">
         {/* Task 1: Link to Ransomware Attack (Manual Remediation) */}
         <Menu.Item key="soc-task-1">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Ransomware Attack (Manual Remediation)
           </a>
         </Menu.Item>
 
         {/* Task 2: Link to SOP Route */}
         <Menu.Item key="soc-task-2">
-          <a href="https://www.youtube.com/" target="_blank">
-            SOP Route
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            SOP
           </a>
         </Menu.Item>
 
         {/* Task 3: Link to Automation Capability */}
         <Menu.Item key="soc-task-3">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Automation Capability
           </a>
         </Menu.Item>
 
         {/* Task 4: Link to Privilege */}
         <Menu.Item key="soc-task-4">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Privilege
           </a>
         </Menu.Item>
@@ -156,14 +155,14 @@ const MenuList = ({ darkTheme }) => {
       >
         {/* Task 1: Link to High Level Reference Architecture */}
         <Menu.Item key="microsegmentation-task-1">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             High Level Reference Architecture
           </a>
         </Menu.Item>
 
         {/* Task 2: Link to Use Cases */}
         <Menu.Item key="microsegmentation-task-2">
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             Use Cases
           </a>
         </Menu.Item>

@@ -162,10 +162,61 @@
   position: relative;
   overflow-y: auto; /* Add vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal overflow */
-  scrollbar-width: thin; /* Firefox: Thin scrollbar */
-
-    
+  scrollbar-width: thin; /* Firefox: Thin scrollbar */    
+  transition: width 0.3s ease; /* Smooth transition for width changes */
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-bar {
+    width: 200px; /* Narrower width on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-bar {
+    width: 150px; /* Even narrower on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-bar {
+    position: fixed; /* Fixed position for mobile screens */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width on mobile screens */
+    height: 100vh; /* Full height on mobile */
+    z-index: 1000; /* Make sure it's on top */
+  }
+
+  /* Adjust Menu styles when sidebar is open */
+  .menu-bar.open {
+    width: 80%; /* Cover 80% of the screen when open */
+  }
+
+  /* Hide the sidebar when not open */
+  .menu-bar.closed {
+    width: 0; /* Hidden state */
+    overflow: hidden; /* Hide content when closed */
+  }
+}
+
+/* Optional: Add a toggle button for mobile screens */
+.menu-toggle-button {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 480px) {
+  .menu-toggle-button {
+    display: block; /* Show on mobile screens */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+  }
+}
+
+
 
 .toggle-theme-btn{
   position: relative;

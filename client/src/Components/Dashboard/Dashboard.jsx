@@ -7,7 +7,7 @@ import ToggleThemeButton from "./ToggleThemeButton";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Activity from "./Activity";
 
-// Destructure Layout components
+// Destructure Layout components from Ant Design
 const { Header, Sider } = Layout;
 
 function Dashboard() {
@@ -36,12 +36,16 @@ function Dashboard() {
           theme={darkTheme ? "dark" : "light"}
           className="sidebar"
           style={{
-            minWidth:780
+            minWidth: 400, // Ensures the sidebar has a fixed minimum width
+            flex: "0 0 400px",
+            maxWidth: 400,
+            width: 400,
           }}
         >
           {/* Logo component */}
           <Logo />
 
+          {/* Title that hides when the sidebar is collapsed */}
           <h2
             className="title"
             style={collapsed ? { opacity: 0 } : { opacity: 1 }}
@@ -57,8 +61,7 @@ function Dashboard() {
         </Sider>
 
         <Layout>
-          {/* Header with dynamic background color */}
-          {/* <Header style={{ padding: 0, background: colorBgContainer }}> */}
+          {/* Header with dynamic background color or image */}
           <Header
             style={{
               padding: 0,
@@ -75,9 +78,11 @@ function Dashboard() {
             />
           </Header>
 
+          {/* Main content area where routes will be rendered */}
           <div className="routes">
             <Routes>
               <Route path="/" element={<Activity />} />
+              {/* Placeholder routes for future implementation */}
               {/* <Route path="/activity" element={} />
               <Route path="/sse_task" element={} />
               <Route path="/payload" element={} />
