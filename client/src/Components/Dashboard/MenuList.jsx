@@ -35,14 +35,14 @@ const MenuList = ({ darkTheme }) => {
 
         {/* Task 2: Link to Change Request */}
         <Menu.Item key="firewall-task-2">
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://hclpbtest3.service-now.com/login.do" target="_blank" rel="noopener noreferrer">
             Change Request
           </a>
         </Menu.Item>
 
         {/* Task 3: Link to HclTech Automation */}
         <Menu.Item key="firewall-task-3">
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://192.168.60.12" target="_blank" rel="noopener noreferrer">
             HclTech Automation
           </a>
         </Menu.Item>
