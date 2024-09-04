@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Globe from 'react-globe.gl';
 import SlideshowA1 from "../../../assets/slide_a (1).jpg";
 import SlideshowA2 from "../../../assets/slide_a (2).jpg";
 import SlideshowA3 from "../../../assets/slide_a (3).jpg";
@@ -8,20 +9,18 @@ import SlideshowB3 from "../../../assets/slide_b (3).jpg";
 import SlideshowC1 from "../../../assets/slide_c (1).jpg";
 import SlideshowC2 from "../../../assets/slide_c (2).jpg";
 import SlideshowC3 from "../../../assets/slide_c (3).jpg";
-import mapImg from "../../../assets/map.png"; // Assuming you have a map image
+
+import './Activity.css';
 
 function Activity() {
-  // State to handle current slide index for each location
   const [friscoIndex, setFriscoIndex] = useState(0);
   const [noidaIndex, setNoidaIndex] = useState(0);
   const [chennaiIndex, setChennaiIndex] = useState(0);
 
-  // Arrays to store images for each location
   const friscoImages = [SlideshowA1, SlideshowA2, SlideshowA3];
   const noidaImages = [SlideshowB1, SlideshowB2, SlideshowB3];
   const chennaiImages = [SlideshowC1, SlideshowC2, SlideshowC3];
 
-  // Function to handle slide change
   const nextSlide = (setIndex, images) => {
     setIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -30,146 +29,80 @@ function Activity() {
     setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  // Auto-slide for each location
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide(setFriscoIndex, friscoImages);
       nextSlide(setNoidaIndex, noidaImages);
       nextSlide(setChennaiIndex, chennaiImages);
-    }, 2000); // Change image every  seconds
+    }, 2000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, [friscoImages, noidaImages, chennaiImages]);
 
   return (
-    <div style={{ height: "100vh", fontFamily: 'Arial, sans-serif' }}>
-      {/* Header */}
-      <h1 style={{ textAlign: 'center', margin: '20px 0' }}>
+    <div className="activity-container">
+      <h1 className="activity-header">
         HCLTech CSFC (Cyber Security Fusion Centre) – Service Offerings
       </h1>
 
-      {/* Image Grid */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '40px' }}>
-        {/* Frisco Slideshow */}
-        <div style={{ textAlign: 'center', position: 'relative', width: '300px' }}>
+      <div className="activity-slideshow-container">
+        <div className="activity-slideshow">
           <img
             src={friscoImages[friscoIndex]}
             alt="Frisco"
-            style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            className="activity-image"
           />
           <button
             onClick={() => prevSlide(setFriscoIndex, friscoImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-prev-button"
           >
             &#9664;
           </button>
           <button
             onClick={() => nextSlide(setFriscoIndex, friscoImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              right: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-next-button"
           >
             &#9654;
           </button>
           <p>Frisco</p>
         </div>
 
-        {/* Noida Slideshow */}
-        <div style={{ textAlign: 'center', position: 'relative', width: '300px' }}>
+        <div className="activity-slideshow">
           <img
             src={noidaImages[noidaIndex]}
             alt="Noida"
-            style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            className="activity-image"
           />
           <button
             onClick={() => prevSlide(setNoidaIndex, noidaImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-prev-button"
           >
             &#9664;
           </button>
           <button
             onClick={() => nextSlide(setNoidaIndex, noidaImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              right: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-next-button"
           >
             &#9654;
           </button>
           <p>Noida</p>
         </div>
 
-        {/* Chennai Slideshow */}
-        <div style={{ textAlign: 'center', position: 'relative', width: '300px' }}>
+        <div className="activity-slideshow">
           <img
             src={chennaiImages[chennaiIndex]}
             alt="Chennai"
-            style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            className="activity-image"
           />
           <button
             onClick={() => prevSlide(setChennaiIndex, chennaiImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-prev-button"
           >
             &#9664;
           </button>
           <button
             onClick={() => nextSlide(setChennaiIndex, chennaiImages)}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              right: '10px',
-              transform: 'translateY(-50%)',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
+            className="activity-next-button"
           >
             &#9654;
           </button>
@@ -177,16 +110,18 @@ function Activity() {
         </div>
       </div>
 
-      {/* Map Section */}
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <img
-          src={mapImg}
-          alt="Global CSFCs Map"
-          style={{ width: '80%', height: 'auto', borderRadius: '8px' }}
+      <div className="activity-map-container">
+        <Globe
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          backgroundColor="rgba(0, 0, 0, 0)"
+          width={660} // Increased by 10%
+          height={440} // Increased by 10%
+          animateIn={true}
+          rotateSpeed={0.05} // Controls the speed of rotation
         />
-        <h2 style={{ color: 'green' }}>Global CSFCs</h2>
-        <p style={{ fontSize: '12px', color: 'purple' }}>* CSFC</p>
-        <p style={{ fontSize: '12px', color: 'green' }}>*Emerging Satellite Centers</p>
+        <h2 className="activity-globe-title">Global CSFCs</h2>
+        <p className="activity-globe-legend purple">* CSFC</p>
+        <p className="activity-globe-legend green">*Emerging Satellite Centers</p>
       </div>
     </div>
   );
