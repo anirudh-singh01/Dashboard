@@ -153,18 +153,33 @@
 } */
 
 .menu-bar {
-  height: calc(100vh - 4rem); /* Adjust the height to fit within the viewport */
+  height: calc(100vh - 4rem); /* Full height minus some padding */
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
   font-size: 1rem;
   position: relative;
-  overflow-y: auto; /* Add vertical scrollbar */
+  overflow-y: auto; /* Vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal overflow */
-  scrollbar-width: thin; /* Firefox: Thin scrollbar */    
+  scrollbar-width: thin; /* For Firefox */
   transition: width 0.3s ease; /* Smooth transition for width changes */
 }
+
+/* Optional: Customize the scrollbar style */
+.menu-bar::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+}
+
+.menu-bar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.menu-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color when hovered */
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {

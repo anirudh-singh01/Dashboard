@@ -4,7 +4,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import Logo from "./Logo";
 import MenuList from "./MenuList";
 import ToggleThemeButton from "./ToggleThemeButton";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Activity from "./Activity";
 
 // Destructure Layout components from Ant Design
