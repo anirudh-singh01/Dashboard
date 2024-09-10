@@ -50,7 +50,7 @@ function Dashboard() {
             className="title"
             style={collapsed ? { opacity: 0 } : { opacity: 1 }}
           >
-            CIDC Demo Platform
+            Dashboard
           </h2>
 
           {/* MenuList component with theme prop */}

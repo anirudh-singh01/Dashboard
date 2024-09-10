@@ -6,19 +6,20 @@
 .activity-header {
   text-align: center;
   margin: 20px 0;
+  color: white;
 }
 
 .activity-slideshow-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-bottom: 40px;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .activity-slideshow {
   text-align: center;
   position: relative;
-  width: 350px;
+  width: 380px;
 }
 
 .activity-image {
@@ -45,6 +46,10 @@
 
 .activity-next-button {
   right: 10px;
+}
+
+.activity-slider-footer{
+ color: white;
 }
 
 /* Globe & Map Styling */

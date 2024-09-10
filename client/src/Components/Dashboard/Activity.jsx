@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import Globe from 'react-globe.gl';
 import * as THREE from 'three';
-import SlideshowA1 from "../../../assets/slide_a (1).jpg";
-import SlideshowA2 from "../../../assets/slide_a (2).jpg";
-import SlideshowA3 from "../../../assets/slide_a (3).jpg";
-import SlideshowB1 from "../../../assets/slide_b (1).jpg";
-import SlideshowB2 from "../../../assets/slide_b (2).jpg";
-import SlideshowB3 from "../../../assets/slide_b (3).jpg";
-import SlideshowC1 from "../../../assets/slide_c (1).jpg";
-import SlideshowC2 from "../../../assets/slide_c (2).jpg";
-import SlideshowC3 from "../../../assets/slide_c (3).jpg";
+import SlideshowA1 from "../../../assets/before_s1.jpg";
+import SlideshowA2 from "../../../assets/before_s2.png";
+//import SlideshowA3 from "../../../assets/slide_a (3).jpg";
+import SlideshowB1 from "../../../assets/firewall.png";
+// import SlideshowB2 from "../../../assets/slide_b (2).jpg";
+// import SlideshowB3 from "../../../assets/slide_b (3).jpg";
+import SlideshowC1 from "../../../assets/after_s1.jpg";
+import SlideshowC2 from "../../../assets/after_s2.png";
+//import SlideshowC3 from "../../../assets/slide_c (3).jpg";
 import SpaceImg from "../../../assets/Space_stars.jpg";
 import './Activity.css';
 
@@ -19,9 +19,9 @@ function Activity() {
   const [chennaiIndex, setChennaiIndex] = useState(0);
   const globeEl = useRef();
 
-  const friscoImages = [SlideshowA1, SlideshowA2, SlideshowA3];
-  const noidaImages = [SlideshowB1, SlideshowB2, SlideshowB3];
-  const chennaiImages = [SlideshowC1, SlideshowC2, SlideshowC3];
+  const friscoImages = [SlideshowA1, SlideshowA2]; //, SlideshowA3
+  const noidaImages = [SlideshowB1]; //, SlideshowB2, SlideshowB3
+  const chennaiImages = [SlideshowC1, SlideshowC2];//, SlideshowC3
 
   const nextSlide = (setIndex, images) => {
     setIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -71,7 +71,7 @@ function Activity() {
   return (
     <div className="activity-container">
       <h1 className="activity-header">
-        HCLTech CSFC (Cyber Security Fusion Centre) – Service Offerings
+        HCLTech CIDC (Cyber Innovation & Design Center) – Demo Platform
       </h1>
 
       <div className="activity-slideshow-container">
@@ -93,7 +93,7 @@ function Activity() {
           >
             &#9654;
           </button>
-          <p>Frisco</p>
+          <p className="activity-slider-footer">Before SSE</p>
         </div>
 
         <div className="activity-slideshow">
@@ -114,7 +114,7 @@ function Activity() {
           >
             &#9654;
           </button>
-          <p>Noida</p>
+          <p className="activity-slider-footer">After SSE</p>
         </div>
 
         <div className="activity-slideshow">
@@ -135,7 +135,7 @@ function Activity() {
           >
             &#9654;
           </button>
-          <p>Chennai</p>
+          <p className="activity-slider-footer">Firewall</p>
         </div>
       </div>
 
@@ -152,8 +152,8 @@ function Activity() {
             bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
             backgroundColor="rgba(0, 0, 0, 0)"
             animateIn={true}
+            height={580} // Set fixed height
             width={1050}  // Set fixed width
-            height={590} // Set fixed height
           />
         </div>
       </div>

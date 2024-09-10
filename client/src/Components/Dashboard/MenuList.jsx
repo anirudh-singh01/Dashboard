@@ -91,7 +91,7 @@ const MenuList = ({ darkTheme }) => {
       {/* Privileged Remote Access */}
       <Menu.Item key="privileged-remote-access" icon={<PayCircleOutlined />}>
         <a
-          href="https://www.youtube.com/"
+          href="https:/pra.cyberlab.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -116,7 +116,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="endpoint-task-2">
           <a
-            href="https://www.youtube.com/"
+            href="https://192.168.8.140"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -125,7 +125,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="endpoint-task-3">
           <a
-            href="https://www.youtube.com/"
+            href="https://192.168.8.161"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +138,7 @@ const MenuList = ({ darkTheme }) => {
       <Menu.SubMenu key="soc-tasks" icon={<BarsOutlined />} title="SOC">
         <Menu.Item key="soc-task-1">
           <a
-            href="https://www.youtube.com/"
+            href="https://192.168.60.26"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -156,7 +156,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="soc-task-3">
           <a
-            href="https://www.youtube.com/"
+            href="https://192.168.8.161"
             target="_blank"
             rel="noopener noreferrer"
           >
