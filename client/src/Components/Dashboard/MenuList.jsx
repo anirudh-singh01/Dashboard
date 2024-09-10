@@ -1,10 +1,15 @@
 import { Menu } from "antd";
 import {
-  AreaChartOutlined,
-  PayCircleOutlined,
   BarsOutlined,
+  LogoutOutlined
 } from "@ant-design/icons";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Firewall_1 from "../../../assets/firewall.png";
+import SSE_1 from "../../../assets/sse.png";
+import SSE_Before from "../../../assets/before_s2.png";
+import SSE_After from "../../../assets/after_s2.png";
+import EndPoint_1 from "../../../assets/EndPoint_1.png";
+
 
 const MenuList = ({ darkTheme }) => {
   const navigate = useNavigate();
@@ -30,7 +35,7 @@ const MenuList = ({ darkTheme }) => {
       >
         <Menu.Item key="firewall-task-1">
           <a
-            href="https://www.youtube.com/"
+            href={Firewall_1}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -61,7 +66,7 @@ const MenuList = ({ darkTheme }) => {
       <Menu.SubMenu key="sse-tasks" icon={<BarsOutlined />} title="SSE">
         <Menu.Item key="sse-task-1">
           <a
-            href="https://www.youtube.com/"
+            href={SSE_Before}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -70,7 +75,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="sse-task-2">
           <a
-            href="https://www.youtube.com/"
+            href={SSE_After}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +84,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="sse-task-3">
           <a
-            href="https://www.youtube.com/"
+            href={SSE_1}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -89,15 +94,26 @@ const MenuList = ({ darkTheme }) => {
       </Menu.SubMenu>
 
       {/* Privileged Remote Access */}
-      <Menu.Item key="privileged-remote-access" icon={<PayCircleOutlined />}>
-        <a
-          href="https:/pra.cyberlab.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Privileged Remote Access
-        </a>
-      </Menu.Item>
+      <Menu.SubMenu key="pra-tasks" icon={<BarsOutlined />} title="Privileged Remote Access">
+        <Menu.Item key="pra-task-1">
+          <a
+            href="https:/pra.cyberlab.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3rd Party Access
+          </a>
+        </Menu.Item>
+        <Menu.Item key="pra-task-2">
+          <a
+            href="https:/pra.cyberlab.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Time Bound Access
+          </a>
+        </Menu.Item>
+      </Menu.SubMenu>
 
       {/* Endpoint Protection SubMenu */}
       <Menu.SubMenu
@@ -107,7 +123,7 @@ const MenuList = ({ darkTheme }) => {
       >
         <Menu.Item key="endpoint-task-1">
           <a
-            href="https://www.youtube.com/"
+            href={EndPoint_1}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -201,7 +217,7 @@ const MenuList = ({ darkTheme }) => {
       </Menu.SubMenu>
 
       {/* Logout Button */}
-      <Menu.Item key="logout" icon={<AreaChartOutlined />} onClick={handleLogout}>
+      <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={handleLogout}>
         Logout
       </Menu.Item>
     </Menu>

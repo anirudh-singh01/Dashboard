@@ -4,11 +4,11 @@ import * as THREE from 'three';
 import SlideshowA1 from "../../../assets/before_s1.jpg";
 import SlideshowA2 from "../../../assets/before_s2.png";
 //import SlideshowA3 from "../../../assets/slide_a (3).jpg";
-import SlideshowB1 from "../../../assets/firewall.png";
-// import SlideshowB2 from "../../../assets/slide_b (2).jpg";
+import SlideshowB1 from "../../../assets/after_s1.jpg";
+import SlideshowB2 from "../../../assets/after_s2.png";
 // import SlideshowB3 from "../../../assets/slide_b (3).jpg";
-import SlideshowC1 from "../../../assets/after_s1.jpg";
-import SlideshowC2 from "../../../assets/after_s2.png";
+import SlideshowC1 from "../../../assets/firewall.png";
+//import SlideshowC2 from "../../../assets/after_s2.png";
 //import SlideshowC3 from "../../../assets/slide_c (3).jpg";
 import SpaceImg from "../../../assets/Space_stars.jpg";
 import './Activity.css';
@@ -20,8 +20,8 @@ function Activity() {
   const globeEl = useRef();
 
   const friscoImages = [SlideshowA1, SlideshowA2]; //, SlideshowA3
-  const noidaImages = [SlideshowB1]; //, SlideshowB2, SlideshowB3
-  const chennaiImages = [SlideshowC1, SlideshowC2];//, SlideshowC3
+  const noidaImages = [SlideshowB1, SlideshowB2]; //, SlideshowB3
+  const chennaiImages = [SlideshowC1];//, SlideshowC3, SlideshowC2
 
   const nextSlide = (setIndex, images) => {
     setIndex((prevIndex) => (prevIndex + 1) % images.length);

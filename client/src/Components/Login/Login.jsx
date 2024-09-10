@@ -66,8 +66,8 @@ const Login = () => {
           <video src={video} autoPlay muted loop></video>
 
           <div className="textDiv">
-            <h2 className='title'>Create and develop extraordinary products</h2>
-            <p>Adopt the change in TECH!</p>
+            <h2 className='title'>Cyber Innovation & Design Center</h2>
+            {/* <p>Adopt the change in TECH!</p> */}
           </div>
 
           <div className="footerDiv flex">
@@ -81,7 +81,7 @@ const Login = () => {
         <div className="formDiv flex">
           <div className="headerDiv">
             <img src={logo} alt="Logo Image" />
-            <h3>Welcome Back!</h3>
+            <h3>Demo Portal</h3>
           </div>
 
           <form action="" className='form grid' onSubmit={onSubmit}>

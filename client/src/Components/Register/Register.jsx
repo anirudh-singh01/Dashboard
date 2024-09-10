@@ -52,8 +52,8 @@ const Register = () => {
       <video src={video} autoPlay muted loop></video>
 
       <div className="textDiv">
-      <h2 className='title'>Create and develop extraodinary products</h2>
-      <p>Adopt the change in TECH!</p>
+      <h2 className='title'>Cyber Innovation & Design Center</h2>
+      {/* <p>Adopt the change in TECH!</p> */}
       </div>
 
 
