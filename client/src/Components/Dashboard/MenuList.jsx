@@ -4,11 +4,6 @@ import {
   LogoutOutlined
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import Firewall_1 from "../../../assets/firewall.png";
-import SSE_1 from "../../../assets/sse.png";
-import SSE_Before from "../../../assets/before_s2.png";
-import SSE_After from "../../../assets/after_s2.png";
-import EndPoint_1 from "../../../assets/EndPoint_1.png";
 
 
 const MenuList = ({ darkTheme }) => {
@@ -35,7 +30,7 @@ const MenuList = ({ darkTheme }) => {
       >
         <Menu.Item key="firewall-task-1">
           <a
-            href={Firewall_1}
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -66,7 +61,7 @@ const MenuList = ({ darkTheme }) => {
       <Menu.SubMenu key="sse-tasks" icon={<BarsOutlined />} title="SSE">
         <Menu.Item key="sse-task-1">
           <a
-            href={SSE_Before}
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,7 +70,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="sse-task-2">
           <a
-            href={SSE_After}
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -84,7 +79,7 @@ const MenuList = ({ darkTheme }) => {
         </Menu.Item>
         <Menu.Item key="sse-task-3">
           <a
-            href={SSE_1}
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -123,7 +118,7 @@ const MenuList = ({ darkTheme }) => {
       >
         <Menu.Item key="endpoint-task-1">
           <a
-            href={EndPoint_1}
+            href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >

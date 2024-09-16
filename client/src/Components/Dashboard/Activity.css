@@ -14,12 +14,14 @@
   justify-content: center;
   gap: 30px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .activity-slideshow {
   text-align: center;
   position: relative;
-  width: 380px;
+  width: 80%; /* Default for mobile */
+  max-width: 380px; /* For larger screens */
 }
 
 .activity-image {
@@ -48,10 +50,6 @@
   right: 10px;
 }
 
-.activity-slider-footer{
- color: white;
-}
-
 /* Globe & Map Styling */
 .activity-map-container {
   position: relative;
@@ -73,29 +71,18 @@
   transform: translate(-50%, -50%);
 }
 
-.activity-globe-title {
-  color: green;
-  margin-top: 20px;
-}
-
-.activity-globe-legend {
-  font-size: 12px;
-}
-
-.purple {
-  color: purple;
-}
-
-.green {
-  color: green;
-}
-
+/* Footer */
 .activity-footer {
   text-align: center;
   padding: 20px;
   background-color: #333;
   color: white;
-  position: relative;
-  bottom: 0;
   width: 100%;
+}
+
+/* Responsive Globe */
+@media (min-width: 768px) {
+  .activity-slideshow {
+    width: 380px;
+  }
 }
